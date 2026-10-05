@@ -257,3 +257,5 @@ In `achievements.html`, locate the `ACHIEVEMENTS_LIST` array inside the `<script
 - **No single-page scrolling**: All modules are distinct, dedicated experiences.
 - **Academic metrics**: 9.45 (Sem 1 SGPA), 9.41 (Sem 2 SGPA), 9.43 (1st Year CGPA) at Sanjivani College of Engineering, Kopargaon verified across all pages.
 - **Zero console errors & clean responsive layout**.
+#   P o r t f o l i o  
+ 
