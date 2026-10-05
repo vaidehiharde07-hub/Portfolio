@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achievements &amp; Activities // Vaidehi Harde</title>
+
+  <meta name="description" content="Milestones, hackathon entries, technical workshops, and verified academic honors of Vaidehi Harde at Sanjivani College of Engineering, Kopargaon.">
+  <meta name="theme-color" content="#070b19">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="page-transition-overlay" class="page-transition-overlay" aria-hidden="true"></div>
+
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+  <div class="aurora-grid-overlay" aria-hidden="true"></div>
+  <div class="aurora-vignette" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-monogram-wrap" aria-label="Vaidehi Harde Home">
+        <span class="brand-monogram">VH</span>
+        <div class="brand-title-wrap">
+          <span class="brand-name">VAIDEHI // SPACE</span>
+          <span class="brand-status"><span class="pulse-dot"></span>SYS: ONLINE &bull; 9.43 CGPA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="education.html" class="nav-link">EDUCATION</a></li>
+          <li><a href="skills.html" class="nav-link">SKILLS</a></li>
+          <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+          <li><a href="achievements.html" class="nav-link active">ACHIEVEMENTS</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="audio-toggle-btn" class="hud-btn" aria-label="Toggle UI Audio Effects" title="Toggle Synthesized Audio FX">
+          <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+          <span>AUDIO</span>
+        </button>
+
+        <button id="cmd-palette-btn" class="hud-btn" aria-label="Quick Navigator" title="Quick Navigation (⌘K / Ctrl+K)">
+          <i class="fa-solid fa-terminal"></i>
+          <span class="cmd-badge">⌘K</span>
+        </button>
+
+        <a href="admin.html" class="hud-btn admin-link-btn" title="Secure Admin Console">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ADMIN</span>
+        </a>
+
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <div class="brand-monogram">VH</div>
+      <span class="brand-name">NAVIGATION</span>
+      <button id="mobile-close-btn" class="drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> HOME</a></li>
+      <li><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-user"></i> ABOUT ME</a></li>
+      <li><a href="education.html" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> EDUCATION &amp; JOURNEY</a></li>
+      <li><a href="skills.html" class="mobile-nav-link"><i class="fa-solid fa-microchip"></i> SKILLS CONSTELLATION</a></li>
+      <li><a href="projects.html" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> PROJECTS UNIVERSE</a></li>
+      <li><a href="achievements.html" class="mobile-nav-link active"><i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> CONTACT ME</a></li>
+      <li style="height: 1px; background: rgba(255,255,255,0.08); margin: 8px 0;"></li>
+      <li><a href="admin.html" class="mobile-nav-link" style="color: #d8b4fe;"><i class="fa-solid fa-shield-halved"></i> ADMIN CONSOLE</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <p class="drawer-foot-text">Vaidehi Harde &bull; Sanjivani COE</p>
+      <div class="drawer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="contact.html" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       ACHIEVEMENTS MAIN EXPERIENCE
+       =================================================================== -->
+  <main id="main-content" class="subpage-main">
+    <div class="subpage-container">
+      
+      <header class="page-header-banner">
+        <div class="page-breadcrumb">
+          <a href="index.html">HOME</a>
+          <span>/</span>
+          <span>ACHIEVEMENTS &amp; ACTIVITIES</span>
+        </div>
+        <h1 class="page-title">ACHIEVEMENTS &amp; MILESTONES</h1>
+        <p class="page-subtitle">
+          Curated timeline of academic honors, hackathons, technical workshops, and certifications. Structured for easy ongoing additions.
+        </p>
+        <div class="page-header-line"></div>
+      </header>
+
+      <!-- Category Filter Tabs -->
+      <div class="achieve-tabs-hud">
+        <button class="achieve-filter-btn active" data-category="all">ALL ACTIVITIES</button>
+        <button class="achieve-filter-btn" data-category="academics">ACADEMIC HONORS</button>
+        <button class="achieve-filter-btn" data-category="hackathons">HACKATHONS</button>
+        <button class="achieve-filter-btn" data-category="workshops">WORKSHOPS</button>
+        <button class="achieve-filter-btn" data-category="certifications">CERTIFICATIONS</button>
+      </div>
+
+      <!-- Achievements Cards Grid -->
+      <div class="achievements-grid" id="achieve-grid">
+        <!-- Rendered dynamically by script below -->
+      </div>
+
+      <!-- Edit instructions notice -->
+      <!--<div style="margin-top: 40px; padding: 18px 24px; background: rgba(14, 20, 44, 0.6); border: 1px dashed var(--border-cyan); border-radius: var(--radius-md); display: flex; align-items: center; gap: 14px;">
+        <i class="fa-solid fa-lightbulb" style="color: var(--aurora-cyan); font-size: 1.4rem;"></i>
+        <div style="font-size: 0.88rem; color: var(--text-secondary);">
+          <strong>Need to add your new hackathon win or certificate?</strong><br>
+          Simply edit the <code>ACHIEVEMENTS_LIST</code> array inside <code>achievements.html</code> to add new entries instantly without modifying layout styles.
+        </div>
+      </div> -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">VAIDEHI // DIGITAL SPACE</span>
+        <span>&bull; &copy; 2026 Vaidehi Harde &bull; Computer Engineering</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-metric-pill">SGPA 9.45 | SGPA 9.41 | CGPA 9.43</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command Palette Modal -->
+  <div id="cmd-palette" class="cmd-palette-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-box">
+      <div class="cmd-search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-search-input" placeholder="Type page or action..." autocomplete="off">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-results">
+        <div class="cmd-item" data-url="index.html"><i class="fa-solid fa-house"></i><span>Home</span><span class="cmd-target">index.html</span></div>
+        <div class="cmd-item" data-url="about.html"><i class="fa-solid fa-user"></i><span>About Me</span><span class="cmd-target">about.html</span></div>
+        <div class="cmd-item" data-url="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education &amp; 9.43 CGPA</span><span class="cmd-target">education.html</span></div>
+        <div class="cmd-item" data-url="skills.html"><i class="fa-solid fa-microchip"></i><span>Skills Constellation</span><span class="cmd-target">skills.html</span></div>
+        <div class="cmd-item" data-url="projects.html"><i class="fa-solid fa-cubes"></i><span>Project Universe</span><span class="cmd-target">projects.html</span></div>
+        <div class="cmd-item" data-url="achievements.html"><i class="fa-solid fa-trophy"></i><span>Achievements</span><span class="cmd-target">achievements.html</span></div>
+        <div class="cmd-item" data-url="contact.html"><i class="fa-solid fa-paper-plane"></i><span>Contact Me</span><span class="cmd-target">contact.html</span></div>
+        <div class="cmd-item" data-url="admin.html"><i class="fa-solid fa-shield-halved"></i><span>Admin Console</span><span class="cmd-target">admin.html</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    /**
+     * ACHIEVEMENTS_LIST: Easily update or add entries here!
+     * No invented fake accolades.
+     */
+    const ACHIEVEMENTS_LIST = [
+      {
+        id: "ach_01",
+        category: "academics",
+        title: "First Class with Distinction (1st Year)",
+        issuer: "Sanjivani College of Engineering, Kopargaon",
+        date: "2024 - 2025",
+        description: "Achieved outstanding academic standing across both engineering semesters with a cumulative CGPA of 9.43 (Sem 1 SGPA: 9.45, Sem 2 SGPA: 9.41) in Computer Engineering.",
+        status: "Verified Academic Record",
+        icon: "fa-solid fa-award"
+      },
+      {
+        id: "ach_02",
+        category: "workshops",
+        title: "Object-Oriented & Linux Development Workshops",
+        issuer: "Department of Computer Engineering",
+        date: "2024 - 2025",
+        description: "Participated in departmental hands-on technical workshops exploring procedural C foundations, Object-Oriented C++ design, and Linux terminal command tools.",
+        status: "Completed",
+        icon: "fa-solid fa-chalkboard-user"
+      },
+      {
+        id: "ach_03",
+        category: "hackathons",
+        title: "Student Innovation & Hackathon Challenges",
+        issuer: "Campus & Regional Technical Events",
+        date: "2025 (Active)",
+        description: "Collaborated on problem statements addressing real-world pain points in Agritech telemetry, student revision scheduling, and digital loyalty systems.",
+        status: "Active Team Contributor",
+        icon: "fa-solid fa-laptop-code"
+      },
+      {
+        id: "ach_04",
+        category: "certifications",
+        title: "Data Visualization & Technical Skills Certificate",
+        issuer: "Online Learning / University Curriculum",
+        date: "2025",
+        description: "Coursework and hands-on exercises in Python programming, relational data modeling, and business intelligence reporting with Power BI and Tableau.",
+        status: "Ready for Certificate Update",
+        icon: "fa-solid fa-certificate"
+      }
+    ];
+
+    const grid = document.getElementById("achieve-grid");
+
+    function renderCards(filter = "all") {
+      grid.innerHTML = "";
+      const filtered = ACHIEVEMENTS_LIST.filter(item => {
+        if (filter === "all") return true;
+        return item.category === filter;
+      });
+
+      filtered.forEach(item => {
+        const card = document.createElement("article");
+        card.className = "achievement-card";
+        card.innerHTML = `
+          <div class="achieve-card-header">
+            <span class="achieve-cat-pill"><i class="${item.icon}"></i> ${item.category.toUpperCase()}</span>
+            <span class="achieve-date">${item.date}</span>
+          </div>
+          <h2 class="achieve-card-title">${item.title}</h2>
+          <div class="achieve-issuer"><i class="fa-solid fa-building-columns"></i> ${item.issuer}</div>
+          <p class="achieve-desc">${item.description}</p>
+          <div class="achieve-status"><i class="fa-solid fa-circle-check" style="color: var(--aurora-emerald);"></i> ${item.status}</div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    renderCards("all");
+
+    document.querySelectorAll(".achieve-filter-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (window.playUiTone) window.playUiTone(620, "sine", 0.05);
+        document.querySelectorAll(".achieve-filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        renderCards(btn.getAttribute("data-category"));
+      });
+    });
+  </script>
+</body>
+</html>

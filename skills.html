@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Skills // Vaidehi Harde — Tech Stack Constellation</title>
+
+  <meta name="description" content="Explore Vaidehi Harde's technical skills matrix across Programming (C, C++, Python), Web Development (HTML, CSS, JS), Tools (Git, Firebase, VS Code), and Data &amp; AI (Power BI, Tableau, AI/ML).">
+  <meta name="theme-color" content="#070b19">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="page-transition-overlay" class="page-transition-overlay" aria-hidden="true"></div>
+
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+  <div class="aurora-grid-overlay" aria-hidden="true"></div>
+  <div class="aurora-vignette" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-monogram-wrap" aria-label="Vaidehi Harde Home">
+        <span class="brand-monogram">VH</span>
+        <div class="brand-title-wrap">
+          <span class="brand-name">VAIDEHI // SPACE</span>
+          <span class="brand-status"><span class="pulse-dot"></span>SYS: ONLINE &bull; 9.43 CGPA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="education.html" class="nav-link">EDUCATION</a></li>
+          <li><a href="skills.html" class="nav-link active">SKILLS</a></li>
+          <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+          <li><a href="achievements.html" class="nav-link">ACHIEVEMENTS</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="audio-toggle-btn" class="hud-btn" aria-label="Toggle UI Audio Effects" title="Toggle Synthesized Audio FX">
+          <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+          <span>AUDIO</span>
+        </button>
+
+        <button id="cmd-palette-btn" class="hud-btn" aria-label="Quick Navigator" title="Quick Navigation (⌘K / Ctrl+K)">
+          <i class="fa-solid fa-terminal"></i>
+          <span class="cmd-badge">⌘K</span>
+        </button>
+
+        <a href="admin.html" class="hud-btn admin-link-btn" title="Secure Admin Console">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ADMIN</span>
+        </a>
+
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <div class="brand-monogram">VH</div>
+      <span class="brand-name">NAVIGATION</span>
+      <button id="mobile-close-btn" class="drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> HOME</a></li>
+      <li><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-user"></i> ABOUT ME</a></li>
+      <li><a href="education.html" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> EDUCATION &amp; JOURNEY</a></li>
+      <li><a href="skills.html" class="mobile-nav-link active"><i class="fa-solid fa-microchip"></i> SKILLS CONSTELLATION</a></li>
+      <li><a href="projects.html" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> PROJECTS UNIVERSE</a></li>
+      <li><a href="achievements.html" class="mobile-nav-link"><i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> CONTACT ME</a></li>
+      <li style="height: 1px; background: rgba(255,255,255,0.08); margin: 8px 0;"></li>
+      <li><a href="admin.html" class="mobile-nav-link" style="color: #d8b4fe;"><i class="fa-solid fa-shield-halved"></i> ADMIN CONSOLE</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <p class="drawer-foot-text">Vaidehi Harde &bull; Sanjivani COE</p>
+      <div class="drawer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="contact.html" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       SKILLS CONSTELLATION EXPERIENCE
+       =================================================================== -->
+  <main id="main-content" class="subpage-main">
+    <div class="subpage-container">
+      
+      <header class="page-header-banner">
+        <div class="page-breadcrumb">
+          <a href="index.html">HOME</a>
+          <span>/</span>
+          <span>TECHNICAL SKILLS</span>
+        </div>
+        <h1 class="page-title">SKILLS CONSTELLATION</h1>
+        <p class="page-subtitle">
+          Interactive technology matrix categorized by domain. Click any skill card to examine its engineering purpose, key concepts, and practical implementations.
+        </p>
+        <div class="page-header-line"></div>
+      </header>
+
+      <div class="skills-page-layout">
+        
+        <!-- Left Column: Categorized Skill Blocks -->
+        <div class="skills-categories-column">
+          
+          <!-- Category 1: PROGRAMMING -->
+          <div class="skill-category-block">
+            <div class="category-block-header">
+              <i class="fa-solid fa-code cat-header-icon"></i>
+              <h2 class="cat-header-title">Programming</h2>
+            </div>
+            <div class="skills-interactive-grid">
+              
+              <div class="skill-node-card selected" data-skill-key="c" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-c"></i></div>
+                <span class="skill-card-name">C</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="cpp" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-terminal"></i></div>
+                <span class="skill-card-name">C++</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="python" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-brands fa-python"></i></div>
+                <span class="skill-card-name">Python</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 2: WEB DEVELOPMENT -->
+          <div class="skill-category-block">
+            <div class="category-block-header">
+              <i class="fa-solid fa-globe cat-header-icon"></i>
+              <h2 class="cat-header-title">Web Development</h2>
+            </div>
+            <div class="skills-interactive-grid">
+              
+              <div class="skill-node-card" data-skill-key="html" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-brands fa-html5"></i></div>
+                <span class="skill-card-name">HTML</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="css" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                <span class="skill-card-name">CSS</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="javascript" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-brands fa-js"></i></div>
+                <span class="skill-card-name">JavaScript</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 3: TOOLS -->
+          <div class="skill-category-block">
+            <div class="category-block-header">
+              <i class="fa-solid fa-screwdriver-wrench cat-header-icon"></i>
+              <h2 class="cat-header-title">Tools &amp; Infrastructure</h2>
+            </div>
+            <div class="skills-interactive-grid">
+              
+              <div class="skill-node-card" data-skill-key="git" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-brands fa-git-alt"></i></div>
+                <span class="skill-card-name">Git</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="github" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-brands fa-github"></i></div>
+                <span class="skill-card-name">GitHub</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="firebase" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-fire"></i></div>
+                <span class="skill-card-name">Firebase</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="vscode" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <span class="skill-card-name">VS Code</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Category 4: DATA & AI -->
+          <div class="skill-category-block">
+            <div class="category-block-header">
+              <i class="fa-solid fa-brain cat-header-icon"></i>
+              <h2 class="cat-header-title">Data &amp; AI</h2>
+            </div>
+            <div class="skills-interactive-grid">
+              
+              <div class="skill-node-card" data-skill-key="powerbi" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-chart-simple"></i></div>
+                <span class="skill-card-name">Power BI</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="tableau" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                <span class="skill-card-name">Tableau</span>
+              </div>
+
+              <div class="skill-node-card" data-skill-key="aiml" tabindex="0" role="button">
+                <div class="skill-card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                <span class="skill-card-name">AI/ML Fundamentals</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Live Telemetry Inspector Panel -->
+        <aside class="skills-inspector-panel" id="skills-inspector-panel">
+          <div class="inspector-panel-header">
+            <span class="inspector-badge"><i class="fa-solid fa-terminal"></i> TELEMETRY INSPECTOR</span>
+            <span class="inspector-status"><span class="pulse-dot"></span> LIVE NODE</span>
+          </div>
+
+          <div id="inspector-body">
+            <!-- Populated dynamically by script below -->
+          </div>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 16px; margin-top: 24px;">
+            <p style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+              <i class="fa-solid fa-circle-info" style="color: var(--aurora-cyan);"></i> Authentic skills matrix focusing on practical engineering and use cases rather than arbitrary percentages.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">VAIDEHI // DIGITAL SPACE</span>
+        <span>&bull; &copy; 2026 Vaidehi Harde &bull; Computer Engineering</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-metric-pill">SGPA 9.45 | SGPA 9.41 | CGPA 9.43</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command Palette Modal -->
+  <div id="cmd-palette" class="cmd-palette-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-box">
+      <div class="cmd-search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-search-input" placeholder="Type page or action..." autocomplete="off">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-results">
+        <div class="cmd-item" data-url="index.html"><i class="fa-solid fa-house"></i><span>Home</span><span class="cmd-target">index.html</span></div>
+        <div class="cmd-item" data-url="about.html"><i class="fa-solid fa-user"></i><span>About Me</span><span class="cmd-target">about.html</span></div>
+        <div class="cmd-item" data-url="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education &amp; 9.43 CGPA</span><span class="cmd-target">education.html</span></div>
+        <div class="cmd-item" data-url="skills.html"><i class="fa-solid fa-microchip"></i><span>Skills Constellation</span><span class="cmd-target">skills.html</span></div>
+        <div class="cmd-item" data-url="projects.html"><i class="fa-solid fa-cubes"></i><span>Project Universe</span><span class="cmd-target">projects.html</span></div>
+        <div class="cmd-item" data-url="achievements.html"><i class="fa-solid fa-trophy"></i><span>Achievements</span><span class="cmd-target">achievements.html</span></div>
+        <div class="cmd-item" data-url="contact.html"><i class="fa-solid fa-paper-plane"></i><span>Contact Me</span><span class="cmd-target">contact.html</span></div>
+        <div class="cmd-item" data-url="admin.html"><i class="fa-solid fa-shield-halved"></i><span>Admin Console</span><span class="cmd-target">admin.html</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Skills telemetry dictionary
+    const SKILLS_MAP = {
+      "c": {
+        name: "C Programming",
+        domain: "Low-Level Systems & Logic",
+        icon: "fa-solid fa-c",
+        useCase: "Developing low-level algorithmic foundations, pointer manipulation, memory allocation, and problem decomposition.",
+        projects: ["Hospital Management System", "Data Structures & Algorithms"],
+        concepts: ["Pointers & Dynamic Memory", "Data Structures", "Procedural Modularity"]
+      },
+      "cpp": {
+        name: "C++ (Object-Oriented)",
+        domain: "Object-Oriented & Performance Systems",
+        icon: "fa-solid fa-terminal",
+        useCase: "Engineering modular object-oriented software architectures, classes, inheritance, and algorithmic systems.",
+        projects: ["Hospital Management System", "Standard Template Library Implementations"],
+        concepts: ["Classes & Polymorphism", "Encapsulation & Inheritance", "STL (Vectors, Maps, Queues)"]
+      },
+      "python": {
+        name: "Python",
+        domain: "Application & Scientific Computing",
+        icon: "fa-brands fa-python",
+        useCase: "Rapid application prototyping, data manipulation scripts, and algorithmic scheduling engines.",
+        projects: ["AI Study Planner", "Agritech Project", "Data Analytics"],
+        concepts: ["Scripting & Automation", "Data Analysis", "Heuristic Logic", "Modular Functions"]
+      },
+      "html": {
+        name: "HTML5",
+        domain: "Semantic Web Architecture",
+        icon: "fa-brands fa-html5",
+        useCase: "Authoring accessible, semantic, and modern DOM document hierarchies for multi-page digital interfaces.",
+        projects: ["Personal Portfolio", "Café Loyalty System", "AI Study Planner"],
+        concepts: ["Semantic Elements", "ARIA Accessibility", "Document Object Model"]
+      },
+      "css": {
+        name: "CSS3",
+        domain: "Responsive Design & Styling",
+        icon: "fa-brands fa-css3-alt",
+        useCase: "Crafting custom glassmorphism styles, responsive grid architectures, custom animations, and Aurora themes.",
+        projects: ["Personal Portfolio", "Café Loyalty System"],
+        concepts: ["CSS Custom Properties", "CSS Grid & Flexbox", "Hardware Animations", "Media Queries"]
+      },
+      "javascript": {
+        name: "JavaScript (ES6+)",
+        domain: "Client-Side Interaction & Engine",
+        icon: "fa-brands fa-js",
+        useCase: "Orchestrating dynamic DOM manipulation, Canvas animation loops, Web Audio API synthesis, and asynchronous Firestore sync.",
+        projects: ["Personal Portfolio", "Café Loyalty System", "AI Study Planner"],
+        concepts: ["ES6+ Syntax", "Async/Await & Promises", "Canvas API", "Event Delegation"]
+      },
+      "git": {
+        name: "Git",
+        domain: "Distributed Version Control",
+        icon: "fa-brands fa-git-alt",
+        useCase: "Managing source code revisions, structured commit discipline, branch merging, and collaborative workflows.",
+        projects: ["All Academic & Personal Software Projects"],
+        concepts: ["Branching Workflows", "Commit Discipline", "Merge Conflict Resolution"]
+      },
+      "github": {
+        name: "GitHub",
+        domain: "Remote Collaboration & CI",
+        icon: "fa-brands fa-github",
+        useCase: "Hosting open-source repositories, documentation wikis, pull requests, and deployment integrations.",
+        projects: ["All Open Source Work"],
+        concepts: ["Pull Requests", "Repository Architecture", "Markdown Documentation"]
+      },
+      "firebase": {
+        name: "Firebase (Firestore & Auth)",
+        domain: "Cloud Backend & BaaS",
+        icon: "fa-solid fa-fire",
+        useCase: "Managing real-time Cloud Firestore NoSQL databases, user authentication for admin consoles, and secure rules.",
+        projects: ["Personal Portfolio", "Café Loyalty & Rewards System"],
+        concepts: ["Cloud Firestore Collections", "Firebase Authentication", "Security Rules"]
+      },
+      "vscode": {
+        name: "VS Code",
+        domain: "Development Environment",
+        icon: "fa-solid fa-laptop-code",
+        useCase: "Primary IDE for full-stack engineering, debugging, linting, and local development servers.",
+        projects: ["Daily Engineering Workflow"],
+        concepts: ["Debugging Workflows", "Extensions Ecosystem", "Integrated Terminal"]
+      },
+      "powerbi": {
+        name: "Power BI",
+        domain: "Business Intelligence & KPIs",
+        icon: "fa-solid fa-chart-simple",
+        useCase: "Synthesizing multi-thousand row tabular datasets into executive interactive dashboards, KPI visuals, and multi-page reports.",
+        projects: ["Data Visualization Dashboard"],
+        concepts: ["Data Modeling", "DAX Expressions", "Interactive Cross-Filtering", "KPI Cards"]
+      },
+      "tableau": {
+        name: "Tableau",
+        domain: "Exploratory Visual Analytics",
+        icon: "fa-solid fa-chart-pie",
+        useCase: "Conducting visual exploratory data analysis, geospatial mapping, and visual data storytelling.",
+        projects: ["Data Visualization Dashboard"],
+        concepts: ["Calculated Fields", "Visual Encodings", "Dashboard Actions & Parameters"]
+      },
+      "aiml": {
+        name: "AI/ML Fundamentals",
+        domain: "Intelligent Algorithms & Heuristics",
+        icon: "fa-solid fa-network-wired",
+        useCase: "Designing heuristic prioritization algorithms, study planning engines, and exploring regression and classification basics.",
+        projects: ["AI Study Planner", "Agritech Telemetry"],
+        concepts: ["Heuristic Scheduling", "Data Preprocessing", "Pattern Recognition"]
+      }
+    };
+
+    const inspectorBody = document.getElementById("inspector-body");
+
+    function renderInspector(skillKey) {
+      const skill = SKILLS_MAP[skillKey] || SKILLS_MAP["c"];
+      const projectPills = skill.projects.map(p => 
+        `<span class="tag-badge accent" style="font-size: 0.75rem;"><i class="fa-solid fa-cube"></i> ${p}</span>`
+      ).join("");
+      const conceptPills = skill.concepts.map(c => 
+        `<span class="tag-badge" style="font-size: 0.75rem;">${c}</span>`
+      ).join("");
+
+      inspectorBody.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+          <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(0, 245, 212, 0.1); border: 1px solid var(--border-cyan); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--aurora-cyan);">
+            <i class="${skill.icon}"></i>
+          </div>
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #ffffff;">${skill.name}</h3>
+            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--aurora-blue);">${skill.domain}</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <span style="display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 6px;">APPLICATION &amp; PURPOSE</span>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">${skill.useCase}</p>
+        </div>
+
+        <div style="margin-bottom: 18px;">
+          <span style="display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 8px;">KEY CONCEPTS</span>
+          <div class="tags-wrap">${conceptPills}</div>
+        </div>
+
+        <div>
+          <span style="display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 8px;">RELATED IMPLEMENTATIONS</span>
+          <div class="tags-wrap">${projectPills}</div>
+        </div>
+      `;
+    }
+
+    // Default selection
+    renderInspector("c");
+
+    // Click handlers on skill nodes
+    document.querySelectorAll(".skill-node-card").forEach(card => {
+      const select = () => {
+        if (window.playUiTone) window.playUiTone(640, "sine", 0.05);
+        document.querySelectorAll(".skill-node-card").forEach(c => c.classList.remove("selected"));
+        card.classList.add("selected");
+        const key = card.getAttribute("data-skill-key");
+        renderInspector(key);
+      };
+      card.addEventListener("click", select);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          select();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

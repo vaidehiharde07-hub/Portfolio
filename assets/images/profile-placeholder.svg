@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f24" />
+      <stop offset="50%" stop-color="#141c3a" />
+      <stop offset="100%" stop-color="#070b19" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="50%" stop-color="#4361ee" />
+      <stop offset="100%" stop-color="#7209b7" />
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255, 255, 255, 0.04)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="480" fill="url(#bgGrad)" />
+  <rect width="400" height="480" fill="url(#grid)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="200" cy="180" r="120" fill="rgba(67, 97, 238, 0.2)" filter="blur(40px)" />
+  <circle cx="280" cy="120" r="90" fill="rgba(0, 245, 212, 0.15)" filter="blur(30px)" />
+
+  <!-- Cybernetic Geometric Silhouette Frame -->
+  <rect x="30" y="30" width="340" height="420" rx="20" fill="none" stroke="url(#glowGrad)" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+
+  <!-- Minimal Silhouette Icon -->
+  <g transform="translate(200, 190)">
+    <!-- Head -->
+    <circle cx="0" cy="-45" r="48" fill="none" stroke="url(#glowGrad)" stroke-width="3" />
+    <!-- Monogram VH in center of head -->
+    <text x="0" y="-35" font-family="'Space Grotesk', -apple-system, sans-serif" font-weight="700" font-size="28" fill="#ffffff" text-anchor="middle" letter-spacing="2">VH</text>
+    
+    <!-- Torso / Shoulders -->
+    <path d="M -75 70 C -75 10 -40 -5 0 -5 C 40 -5 75 10 75 70 Z" fill="none" stroke="url(#glowGrad)" stroke-width="3" />
+    <path d="M -50 70 C -50 25 -25 15 0 15 C 25 15 50 25 50 70 Z" fill="rgba(67, 97, 238, 0.15)" />
+  </g>
+
+  <!-- Telemetry HUD Badges -->
+  <g transform="translate(200, 340)">
+    <rect x="-140" y="0" width="280" height="36" rx="18" fill="rgba(10, 15, 36, 0.85)" stroke="rgba(0, 245, 212, 0.4)" stroke-width="1.5" />
+    <circle cx="-116" cy="18" r="5" fill="#00f5d4" />
+    <text x="-96" y="23" font-family="'JetBrains Mono', monospace" font-size="12" fill="#00f5d4" font-weight="600" letter-spacing="1">PHOTO PLACEHOLDER</text>
+  </g>
+
+  <g transform="translate(200, 395)">
+    <text x="0" y="0" font-family="'Space Grotesk', sans-serif" font-size="13" fill="#cbd5e1" text-anchor="middle">Place your photo here:</text>
+    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8" text-anchor="middle">assets/images/profile.jpg</text>
+  </g>
+
+  <!-- Corner Brackets -->
+  <path d="M 45 65 L 45 45 L 65 45" fill="none" stroke="#00f5d4" stroke-width="2.5" />
+  <path d="M 355 65 L 355 45 L 335 45" fill="none" stroke="#00f5d4" stroke-width="2.5" />
+  <path d="M 45 415 L 45 435 L 65 435" fill="none" stroke="#00f5d4" stroke-width="2.5" />
+  <path d="M 355 415 L 355 435 L 335 435" fill="none" stroke="#00f5d4" stroke-width="2.5" />
+</svg>

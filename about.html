@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me // Vaidehi Harde — Computer Engineering Student</title>
+
+  <meta name="description" content="Discover Vaidehi Harde's background, engineering philosophy, interests in AI and web development, and educational journey at Sanjivani College of Engineering.">
+  <meta name="theme-color" content="#070b19">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Skip Link & Transition -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="page-transition-overlay" class="page-transition-overlay" aria-hidden="true"></div>
+
+  <!-- Cursor & Canvas -->
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+  <div class="aurora-grid-overlay" aria-hidden="true"></div>
+  <div class="aurora-vignette" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-monogram-wrap" aria-label="Vaidehi Harde Home">
+        <span class="brand-monogram">VH</span>
+        <div class="brand-title-wrap">
+          <span class="brand-name">VAIDEHI // SPACE</span>
+          <span class="brand-status"><span class="pulse-dot"></span>SYS: ONLINE &bull; 9.43 CGPA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link active">ABOUT</a></li>
+          <li><a href="education.html" class="nav-link">EDUCATION</a></li>
+          <li><a href="skills.html" class="nav-link">SKILLS</a></li>
+          <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+          <li><a href="achievements.html" class="nav-link">ACHIEVEMENTS</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="audio-toggle-btn" class="hud-btn" aria-label="Toggle UI Audio Effects" title="Toggle Synthesized Audio FX">
+          <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+          <span>AUDIO</span>
+        </button>
+
+        <button id="cmd-palette-btn" class="hud-btn" aria-label="Quick Navigator" title="Quick Navigation (⌘K / Ctrl+K)">
+          <i class="fa-solid fa-terminal"></i>
+          <span class="cmd-badge">⌘K</span>
+        </button>
+
+        <a href="admin.html" class="hud-btn admin-link-btn" title="Secure Admin Console">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ADMIN</span>
+        </a>
+
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <div class="brand-monogram">VH</div>
+      <span class="brand-name">NAVIGATION</span>
+      <button id="mobile-close-btn" class="drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> HOME</a></li>
+      <li><a href="about.html" class="mobile-nav-link active"><i class="fa-solid fa-user"></i> ABOUT ME</a></li>
+      <li><a href="education.html" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> EDUCATION &amp; JOURNEY</a></li>
+      <li><a href="skills.html" class="mobile-nav-link"><i class="fa-solid fa-microchip"></i> SKILLS CONSTELLATION</a></li>
+      <li><a href="projects.html" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> PROJECTS UNIVERSE</a></li>
+      <li><a href="achievements.html" class="mobile-nav-link"><i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> CONTACT ME</a></li>
+      <li style="height: 1px; background: rgba(255,255,255,0.08); margin: 8px 0;"></li>
+      <li><a href="admin.html" class="mobile-nav-link" style="color: #d8b4fe;"><i class="fa-solid fa-shield-halved"></i> ADMIN CONSOLE</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <p class="drawer-foot-text">Vaidehi Harde &bull; Sanjivani COE</p>
+      <div class="drawer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="contact.html" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       ABOUT MAIN EXPERIENCE
+       =================================================================== -->
+  <main id="main-content" class="subpage-main">
+    <div class="subpage-container">
+      
+      <!-- Page Header Banner -->
+      <header class="page-header-banner">
+        <div class="page-breadcrumb">
+          <a href="index.html">HOME</a>
+          <span>/</span>
+          <span>ABOUT ME</span>
+        </div>
+        <h1 class="page-title">ABOUT VAIDEHI</h1>
+        <p class="page-subtitle">
+          2nd-year Computer Engineering student, system builder, and continuous learner exploring technology, artificial intelligence, and software craftsmanship.
+        </p>
+        <div class="page-header-line"></div>
+      </header>
+
+      <!-- Profile Grid: Photo & Biography Card -->
+      <div class="about-experience-grid">
+        
+        <!-- Left: Portrait & Fast Telemetry -->
+        <div class="about-portrait-card">
+          <div class="about-photo-frame">
+            <img 
+              src="assets/images/profile.jpg" 
+              alt="Vaidehi Harde" 
+              class="about-photo"
+              onerror="this.onerror=null; this.src='assets/images/profile-placeholder.svg';"
+            >
+          </div>
+          <div class="about-identity-badge">
+            <h2 class="about-name-tag">Vaidehi Harde</h2>
+            <span class="about-role-tag">Computer Engineering Student</span>
+          </div>
+          <div class="about-specs-list">
+            <div class="spec-item">
+              <span class="spec-key">INSTITUTION</span>
+              <span class="spec-val">Sanjivani COE, Kopargaon</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">CURRENT YEAR</span>
+              <span class="spec-val">2nd Year (B.Tech)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">1ST YEAR CGPA</span>
+              <span class="spec-val" style="color: var(--aurora-cyan);">9.43 / 10.0</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-key">PRIMARY FOCUS</span>
+              <span class="spec-val">AI, Web Dev &amp; Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Biography & Matrix -->
+        <div class="about-bio-card">
+          <div class="bio-eyebrow">// PERSONAL MANIFESTO</div>
+          <h2 class="bio-title">Building with discipline, curiosity, and code.</h2>
+          <p class="bio-lead-text">
+            I am driven by the thrill of breaking complex engineering challenges into clean, structured software systems.
+          </p>
+          <p class="bio-body-text">
+            Currently pursuing my Bachelor of Technology in Computer Engineering at Sanjivani College of Engineering, Kopargaon, I maintain a strong academic foundation (9.43 CGPA) while constantly experimenting beyond textbooks. My journey spans low-level problem solving in C/C++, algorithmic Python tooling, interactive modern web engineering, and data analytics with Power BI and Tableau.
+          </p>
+
+          <!-- Core Interests & Hobbies Matrix -->
+          <div class="about-interests-matrix">
+            <div>
+              <span class="interests-label"><i class="fa-solid fa-compass"></i> CORE INTERESTS</span>
+              <div class="tags-wrap" style="margin-top: 8px;">
+                <span class="tag-badge">Artificial Intelligence</span>
+                <span class="tag-badge">Web Development</span>
+                <span class="tag-badge">Programming</span>
+                <span class="tag-badge">Data Visualization</span>
+                <span class="tag-badge">Technology</span>
+                <span class="tag-badge">Building Digital Solutions</span>
+              </div>
+            </div>
+
+            <div>
+              <span class="interests-label"><i class="fa-solid fa-heart"></i> PERSONAL HOBBIES</span>
+              <div class="tags-wrap" style="margin-top: 8px;">
+                <span class="tag-badge accent"><i class="fa-solid fa-plane-departure"></i> Travelling (Perspectives &amp; Cultures)</span>
+                <span class="tag-badge accent"><i class="fa-solid fa-utensils"></i> Cooking (Creativity &amp; Precision)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===============================================================
+           4 INTERACTIVE PILLARS: LEARN, BUILD, EXPLORE, GROW
+           =============================================================== -->
+      <section class="pillars-section" aria-label="Interactive Pillars">
+        <div class="pillars-header-block">
+          <div class="pillars-eyebrow">// FOUNDATIONAL PILLARS</div>
+          <h2 class="pillars-title">HOW I APPROACH TECHNOLOGY</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
+            Click on any pillar to inspect my principles and engineering mindset.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          
+          <!-- Pillar 1: LEARN -->
+          <div class="pillar-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pillar-top-row">
+              <span class="pillar-code">01 // CONTINUOUS</span>
+              <div class="pillar-icon-box"><i class="fa-solid fa-book-open"></i></div>
+            </div>
+            <h3 class="pillar-heading">LEARN</h3>
+            <p class="pillar-intro">Mastering computer science fundamentals and algorithmic thinking with high rigor.</p>
+            <div class="pillar-expansion">
+              <p>Maintaining a dedicated 9.43 CGPA foundation through relentless focus on data structures, algorithmic complexity, memory management in C/C++, and object-oriented paradigms.</p>
+            </div>
+            <div class="pillar-toggle-cue">
+              <span>Inspect details</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 2: BUILD -->
+          <div class="pillar-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pillar-top-row">
+              <span class="pillar-code">02 // CREATION</span>
+              <div class="pillar-icon-box"><i class="fa-solid fa-code"></i></div>
+            </div>
+            <h3 class="pillar-heading">BUILD</h3>
+            <p class="pillar-intro">Translating ideas into working digital systems that address practical friction.</p>
+            <div class="pillar-expansion">
+              <p>From café customer loyalty tracking to intelligent study planners and hospital administrative systems, I believe the true test of engineering knowledge is software that people can use.</p>
+            </div>
+            <div class="pillar-toggle-cue">
+              <span>Inspect details</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 3: EXPLORE -->
+          <div class="pillar-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pillar-top-row">
+              <span class="pillar-code">03 // CURIOSITY</span>
+              <div class="pillar-icon-box"><i class="fa-solid fa-brain"></i></div>
+            </div>
+            <h3 class="pillar-heading">EXPLORE</h3>
+            <p class="pillar-intro">Investigating artificial intelligence heuristics and multi-dimensional data analytics.</p>
+            <div class="pillar-expansion">
+              <p>Exploring machine learning models, statistical pattern analysis, and executive storytelling through Power BI and Tableau to transform raw figures into actionable decisions.</p>
+            </div>
+            <div class="pillar-toggle-cue">
+              <span>Inspect details</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 4: GROW -->
+          <div class="pillar-card" tabindex="0" role="button" aria-expanded="false">
+            <div class="pillar-top-row">
+              <span class="pillar-code">04 // EVOLUTION</span>
+              <div class="pillar-icon-box"><i class="fa-solid fa-seedling"></i></div>
+            </div>
+            <h3 class="pillar-heading">GROW</h3>
+            <p class="pillar-intro">Collaborating with peers, embracing constructive feedback, and pushing limits.</p>
+            <div class="pillar-expansion">
+              <p>Engaging in hackathons, open-source version control workflows, and peer problem-solving to continuously raise my technical and leadership benchmarks.</p>
+            </div>
+            <div class="pillar-toggle-cue">
+              <span>Inspect details</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">VAIDEHI // DIGITAL SPACE</span>
+        <span>&bull; &copy; 2026 Vaidehi Harde &bull; Computer Engineering</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-metric-pill">SGPA 9.45 | SGPA 9.41 | CGPA 9.43</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="admin.html">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command Palette Modal -->
+  <div id="cmd-palette" class="cmd-palette-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-box">
+      <div class="cmd-search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-search-input" placeholder="Type page or action..." autocomplete="off">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-results">
+        <div class="cmd-item" data-url="index.html"><i class="fa-solid fa-house"></i><span>Home</span><span class="cmd-target">index.html</span></div>
+        <div class="cmd-item" data-url="about.html"><i class="fa-solid fa-user"></i><span>About Me</span><span class="cmd-target">about.html</span></div>
+        <div class="cmd-item" data-url="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education &amp; 9.43 CGPA</span><span class="cmd-target">education.html</span></div>
+        <div class="cmd-item" data-url="skills.html"><i class="fa-solid fa-microchip"></i><span>Skills Constellation</span><span class="cmd-target">skills.html</span></div>
+        <div class="cmd-item" data-url="projects.html"><i class="fa-solid fa-cubes"></i><span>Project Universe</span><span class="cmd-target">projects.html</span></div>
+        <div class="cmd-item" data-url="achievements.html"><i class="fa-solid fa-trophy"></i><span>Achievements</span><span class="cmd-target">achievements.html</span></div>
+        <div class="cmd-item" data-url="contact.html"><i class="fa-solid fa-paper-plane"></i><span>Contact Me</span><span class="cmd-target">contact.html</span></div>
+        <div class="cmd-item" data-url="admin.html"><i class="fa-solid fa-shield-halved"></i><span>Admin Console</span><span class="cmd-target">admin.html</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/background.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Pillar card expand/collapse toggle
+    document.querySelectorAll(".pillar-card").forEach(card => {
+      const toggle = () => {
+        if (window.playUiTone) window.playUiTone(580, "sine", 0.06);
+        const wasOpen = card.classList.contains("expanded");
+        document.querySelectorAll(".pillar-card").forEach(c => c.classList.remove("expanded"));
+        if (!wasOpen) {
+          card.classList.add("expanded");
+          card.setAttribute("aria-expanded", "true");
+        } else {
+          card.setAttribute("aria-expanded", "false");
+        }
+      };
+      card.addEventListener("click", toggle);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

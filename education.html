@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education &amp; Journey // Vaidehi Harde (9.43 CGPA)</title>
+
+  <meta name="description" content="Academic performance, milestone timeline, and curriculum progression of Vaidehi Harde at Sanjivani College of Engineering, Kopargaon. 9.43 CGPA.">
+  <meta name="theme-color" content="#070b19">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="page-transition-overlay" class="page-transition-overlay" aria-hidden="true"></div>
+
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+  <div class="aurora-grid-overlay" aria-hidden="true"></div>
+  <div class="aurora-vignette" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-monogram-wrap" aria-label="Vaidehi Harde Home">
+        <span class="brand-monogram">VH</span>
+        <div class="brand-title-wrap">
+          <span class="brand-name">VAIDEHI // SPACE</span>
+          <span class="brand-status"><span class="pulse-dot"></span>SYS: ONLINE &bull; 9.43 CGPA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="education.html" class="nav-link active">EDUCATION</a></li>
+          <li><a href="skills.html" class="nav-link">SKILLS</a></li>
+          <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+          <li><a href="achievements.html" class="nav-link">ACHIEVEMENTS</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="audio-toggle-btn" class="hud-btn" aria-label="Toggle UI Audio Effects" title="Toggle Synthesized Audio FX">
+          <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+          <span>AUDIO</span>
+        </button>
+
+        <button id="cmd-palette-btn" class="hud-btn" aria-label="Quick Navigator" title="Quick Navigation (⌘K / Ctrl+K)">
+          <i class="fa-solid fa-terminal"></i>
+          <span class="cmd-badge">⌘K</span>
+        </button>
+
+        <a href="admin.html" class="hud-btn admin-link-btn" title="Secure Admin Console">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ADMIN</span>
+        </a>
+
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <div class="brand-monogram">VH</div>
+      <span class="brand-name">NAVIGATION</span>
+      <button id="mobile-close-btn" class="drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> HOME</a></li>
+      <li><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-user"></i> ABOUT ME</a></li>
+      <li><a href="education.html" class="mobile-nav-link active"><i class="fa-solid fa-graduation-cap"></i> EDUCATION &amp; JOURNEY</a></li>
+      <li><a href="skills.html" class="mobile-nav-link"><i class="fa-solid fa-microchip"></i> SKILLS CONSTELLATION</a></li>
+      <li><a href="projects.html" class="mobile-nav-link"><i class="fa-solid fa-cubes"></i> PROJECTS UNIVERSE</a></li>
+      <li><a href="achievements.html" class="mobile-nav-link"><i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> CONTACT ME</a></li>
+      <li style="height: 1px; background: rgba(255,255,255,0.08); margin: 8px 0;"></li>
+      <li><a href="admin.html" class="mobile-nav-link" style="color: #d8b4fe;"><i class="fa-solid fa-shield-halved"></i> ADMIN CONSOLE</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <p class="drawer-foot-text">Vaidehi Harde &bull; Sanjivani COE</p>
+      <div class="drawer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="contact.html" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       EDUCATION & JOURNEY CONTENT
+       =================================================================== -->
+  <main id="main-content" class="subpage-main">
+    <div class="subpage-container">
+      
+      <header class="page-header-banner">
+        <div class="page-breadcrumb">
+          <a href="index.html">HOME</a>
+          <span>/</span>
+          <span>EDUCATION &amp; JOURNEY</span>
+        </div>
+        <h1 class="page-title">ACADEMIC JOURNEY</h1>
+        <p class="page-subtitle">
+          Sanjivani College of Engineering, Kopargaon &bull; Computer Engineering (2nd Year). Academic excellence and progressive technical milestones.
+        </p>
+        <div class="page-header-line"></div>
+      </header>
+
+      <!-- Scoreboard Grid -->
+      <section class="education-scoreboard" aria-label="Academic Performance Scoreboard">
+        
+        <div class="score-hud-card featured-score">
+          <span class="score-badge">1ST YEAR OVERALL</span>
+          <div class="score-digits">9.43</div>
+          <div class="score-title">Cumulative Grade Point Average (CGPA)</div>
+          <div class="score-meter">
+            <div class="score-meter-fill" style="width: 94.3%;"></div>
+          </div>
+          <span class="score-footer-note"><i class="fa-solid fa-star" style="color: #f59e0b;"></i> First Class with Distinction Tier</span>
+        </div>
+
+        <div class="score-hud-card">
+          <span class="score-badge">SEMESTER 1</span>
+          <div class="score-digits">9.45</div>
+          <div class="score-title">Semester Grade Point Average (SGPA)</div>
+          <div class="score-meter">
+            <div class="score-meter-fill" style="width: 94.5%;"></div>
+          </div>
+          <span class="score-footer-note">C Foundations, Discrete Mathematics, Logic</span>
+        </div>
+
+        <div class="score-hud-card">
+          <span class="score-badge">SEMESTER 2</span>
+          <div class="score-digits">9.41</div>
+          <div class="score-title">Semester Grade Point Average (SGPA)</div>
+          <div class="score-meter">
+            <div class="score-meter-fill" style="width: 94.1%;"></div>
+          </div>
+          <span class="score-footer-note">Object-Oriented C++, Electronics, Web Tech</span>
+        </div>
+
+      </section>
+
+      <!-- Animated Milestone Timeline -->
+      <section aria-label="Milestone Timeline">
+        <div style="margin-bottom: 28px;">
+          <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--aurora-cyan); letter-spacing: 1.5px;">// MILESTONES &amp; CURRICULUM</span>
+          <h2 style="font-family: var(--font-heading); font-size: 1.8rem; color: #ffffff; margin-top: 4px;">ENGINEERING PROGRESSION</h2>
+        </div>
+
+        <div class="edu-timeline-rail">
+          <div class="timeline-spine"></div>
+
+          <!-- Milestone 1 -->
+          <div class="edu-timeline-item">
+            <div class="edu-timeline-node">
+              <i class="fa-solid fa-school"></i>
+            </div>
+            <div class="edu-timeline-card">
+              <div class="card-time-badge"><i class="fa-regular fa-calendar"></i> 2024 &bull; SEMESTER 1</div>
+              <h3 class="card-edu-title">Engineering Foundations &amp; Algorithmic Thinking</h3>
+              <div class="card-institution">
+                <i class="fa-solid fa-building-columns"></i> Sanjivani College of Engineering, Kopargaon
+              </div>
+              <p class="card-edu-desc">
+                Initiated B.Tech in Computer Engineering. Developed deep grounding in procedural programming with C, discrete mathematics, digital electronics, computational logic, and problem decomposition.
+              </p>
+              <div class="tags-wrap">
+                <span class="tag-badge" style="color: var(--aurora-cyan);">SGPA: 9.45</span>
+                <span class="tag-badge">C Language</span>
+                <span class="tag-badge">Computational Logic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="edu-timeline-item">
+            <div class="edu-timeline-node">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="edu-timeline-card">
+              <div class="card-time-badge"><i class="fa-regular fa-calendar"></i> 2024 - 2025 &bull; SEMESTER 2</div>
+              <h3 class="card-edu-title">Object-Oriented Paradigms &amp; Web Architectures</h3>
+              <div class="card-institution">
+                <i class="fa-solid fa-building-columns"></i> Sanjivani College of Engineering, Kopargaon
+              </div>
+              <p class="card-edu-desc">
+                Advanced into C++ Object-Oriented software engineering (classes, inheritance, polymorphism, templates) and standard modern web architectures (HTML5 semantic standards, CSS3 layout engines, DOM APIs).
+              </p>
+              <div class="tags-wrap">
+                <span class="tag-badge" style="color: var(--aurora-cyan);">SGPA: 9.41</span>
+                <span class="tag-badge">1st Year CGPA: 9.43</span>
+                <span class="tag-badge">C++ OOP</span>
+                <span class="tag-badge">Web Fundamentals</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3: Current -->
+          <div class="edu-timeline-item">
+            <div class="edu-timeline-node active-node">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="edu-timeline-card" style="border-color: var(--border-cyan); background: rgba(16, 24, 52, 0.9);">
+              <div class="card-time-badge" style="color: var(--aurora-cyan); font-weight: 700;">
+                <i class="fa-solid fa-bolt"></i> CURRENT &bull; 2ND YEAR (2025 - 2026)
+              </div>
+              <h3 class="card-edu-title">Applied AI, Data Analytics &amp; Cloud Systems</h3>
+              <div class="card-institution">
+                <i class="fa-solid fa-building-columns"></i> Sanjivani College of Engineering, Kopargaon
+              </div>
+              <p class="card-edu-desc">
+                Currently engaged in advanced Python application prototyping, fundamental machine learning heuristics, cloud databases via Firebase Firestore, and business intelligence with Power BI and Tableau. Actively engineering multi-tier software projects.
+              </p>
+              <div class="tags-wrap">
+                <span class="tag-badge accent">Active Academic Year</span>
+                <span class="tag-badge">Python &amp; AI</span>
+                <span class="tag-badge">Power BI &amp; Tableau</span>
+                <span class="tag-badge">Firebase Firestore</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4: Horizon -->
+          <div class="edu-timeline-item">
+            <div class="edu-timeline-node" style="border-color: var(--aurora-violet); color: var(--aurora-violet);">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+            <div class="edu-timeline-card" style="border-style: dashed;">
+              <div class="card-time-badge" style="color: #d8b4fe;">
+                <i class="fa-solid fa-satellite"></i> UPCOMING HORIZON &bull; 2026 - 2027
+              </div>
+              <h3 class="card-edu-title">Advanced Distributed Systems &amp; Industry Solutions</h3>
+              <div class="card-institution">
+                <i class="fa-solid fa-crosshairs"></i> Future Specialization Targets
+              </div>
+              <p class="card-edu-desc">
+                Targeting machine learning engineering, distributed system design, open-source collaborative codebases, and national hackathon challenges.
+              </p>
+              <div class="tags-wrap">
+                <span class="tag-badge">Distributed Systems</span>
+                <span class="tag-badge">AI/ML Engineering</span>
+                <span class="tag-badge">Hackathon Innovations</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">VAIDEHI // DIGITAL SPACE</span>
+        <span>&bull; &copy; 2026 Vaidehi Harde &bull; Computer Engineering</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-metric-pill">SGPA 9.45 | SGPA 9.41 | CGPA 9.43</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command Palette Modal -->
+  <div id="cmd-palette" class="cmd-palette-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-box">
+      <div class="cmd-search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-search-input" placeholder="Type page or action..." autocomplete="off">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-results">
+        <div class="cmd-item" data-url="index.html"><i class="fa-solid fa-house"></i><span>Home</span><span class="cmd-target">index.html</span></div>
+        <div class="cmd-item" data-url="about.html"><i class="fa-solid fa-user"></i><span>About Me</span><span class="cmd-target">about.html</span></div>
+        <div class="cmd-item" data-url="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education &amp; 9.43 CGPA</span><span class="cmd-target">education.html</span></div>
+        <div class="cmd-item" data-url="skills.html"><i class="fa-solid fa-microchip"></i><span>Skills Constellation</span><span class="cmd-target">skills.html</span></div>
+        <div class="cmd-item" data-url="projects.html"><i class="fa-solid fa-cubes"></i><span>Project Universe</span><span class="cmd-target">projects.html</span></div>
+        <div class="cmd-item" data-url="achievements.html"><i class="fa-solid fa-trophy"></i><span>Achievements</span><span class="cmd-target">achievements.html</span></div>
+        <div class="cmd-item" data-url="contact.html"><i class="fa-solid fa-paper-plane"></i><span>Contact Me</span><span class="cmd-target">contact.html</span></div>
+        <div class="cmd-item" data-url="admin.html"><i class="fa-solid fa-shield-halved"></i><span>Admin Console</span><span class="cmd-target">admin.html</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

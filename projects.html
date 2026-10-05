@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Universe // Vaidehi Harde — Featured Software &amp; Systems</title>
+
+  <meta name="description" content="Explore Vaidehi Harde's software engineering projects: Personal Portfolio, AI Study Planner, Café Loyalty &amp; Rewards, Agritech Telemetry, Hospital Management, and Data Visualization Dashboards.">
+  <meta name="theme-color" content="#070b19">
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div id="page-transition-overlay" class="page-transition-overlay" aria-hidden="true"></div>
+
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+  <div id="cursor-ring" class="cursor-ring" aria-hidden="true"></div>
+  <canvas id="aurora-canvas" aria-hidden="true"></canvas>
+  <div class="aurora-grid-overlay" aria-hidden="true"></div>
+  <div class="aurora-vignette" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-monogram-wrap" aria-label="Vaidehi Harde Home">
+        <span class="brand-monogram">VH</span>
+        <div class="brand-title-wrap">
+          <span class="brand-name">VAIDEHI // SPACE</span>
+          <span class="brand-status"><span class="pulse-dot"></span>SYS: ONLINE &bull; 9.43 CGPA</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="education.html" class="nav-link">EDUCATION</a></li>
+          <li><a href="skills.html" class="nav-link">SKILLS</a></li>
+          <li><a href="projects.html" class="nav-link active">PROJECTS</a></li>
+          <li><a href="achievements.html" class="nav-link">ACHIEVEMENTS</a></li>
+          <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <button id="audio-toggle-btn" class="hud-btn" aria-label="Toggle UI Audio Effects" title="Toggle Synthesized Audio FX">
+          <i class="fa-solid fa-volume-xmark" id="audio-icon"></i>
+          <span>AUDIO</span>
+        </button>
+
+        <button id="cmd-palette-btn" class="hud-btn" aria-label="Quick Navigator" title="Quick Navigation (⌘K / Ctrl+K)">
+          <i class="fa-solid fa-terminal"></i>
+          <span class="cmd-badge">⌘K</span>
+        </button>
+
+        <a href="admin.html" class="hud-btn admin-link-btn" title="Secure Admin Console">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>ADMIN</span>
+        </a>
+
+        <button id="mobile-toggle-btn" class="mobile-toggle-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-backdrop" class="drawer-backdrop" aria-hidden="true"></div>
+  <aside id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="drawer-top">
+      <div class="brand-monogram">VH</div>
+      <span class="brand-name">NAVIGATION</span>
+      <button id="mobile-close-btn" class="drawer-close-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> HOME</a></li>
+      <li><a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-user"></i> ABOUT ME</a></li>
+      <li><a href="education.html" class="mobile-nav-link"><i class="fa-solid fa-graduation-cap"></i> EDUCATION &amp; JOURNEY</a></li>
+      <li><a href="skills.html" class="mobile-nav-link"><i class="fa-solid fa-microchip"></i> SKILLS CONSTELLATION</a></li>
+      <li><a href="projects.html" class="mobile-nav-link active"><i class="fa-solid fa-cubes"></i> PROJECTS UNIVERSE</a></li>
+      <li><a href="achievements.html" class="mobile-nav-link"><i class="fa-solid fa-trophy"></i> ACHIEVEMENTS</a></li>
+      <li><a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-paper-plane"></i> CONTACT ME</a></li>
+      <li style="height: 1px; background: rgba(255,255,255,0.08); margin: 8px 0;"></li>
+      <li><a href="admin.html" class="mobile-nav-link" style="color: #d8b4fe;"><i class="fa-solid fa-shield-halved"></i> ADMIN CONSOLE</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <p class="drawer-foot-text">Vaidehi Harde &bull; Sanjivani COE</p>
+      <div class="drawer-socials">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="contact.html" aria-label="Contact"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ===================================================================
+       PROJECT UNIVERSE MAIN EXPERIENCE
+       =================================================================== -->
+  <main id="main-content" class="subpage-main">
+    <div class="subpage-container">
+      
+      <header class="page-header-banner">
+        <div class="page-breadcrumb">
+          <a href="index.html">HOME</a>
+          <span>/</span>
+          <span>FEATURED PROJECTS</span>
+        </div>
+        <h1 class="page-title">PROJECT UNIVERSE</h1>
+        <p class="page-subtitle">
+          Engineered software solutions spanning interactive web architectures, AI heuristics, commerce systems, and data analytics dashboards.
+        </p>
+        <div class="page-header-line"></div>
+      </header>
+
+      <!-- Category Filter Pills -->
+      <div class="projects-filter-bar">
+        <button class="project-filter-pill active" data-filter="all">ALL PROJECTS (6)</button>
+        <button class="project-filter-pill" data-filter="web">WEB &amp; CLOUD</button>
+        <button class="project-filter-pill" data-filter="ai">AI &amp; PRODUCTIVITY</button>
+        <button class="project-filter-pill" data-filter="data">DATA &amp; IOT</button>
+        <button class="project-filter-pill" data-filter="systems">SYSTEMS ARCHITECTURE</button>
+      </div>
+
+      <!-- Projects Grid (6 Real Projects) -->
+      <div class="projects-gallery-grid">
+        
+        <!-- Project 01: Personal Portfolio -->
+        <article class="project-card" data-project-id="01" data-domain="web" tabindex="0" role="button" aria-label="Open Personal Portfolio details">
+          <div class="project-card-header">
+            <span class="project-id-tag">PROJECT // 01</span>
+            <span class="project-badge-tag"><span class="pulse-dot"></span> LIVE WEB APP</span>
+          </div>
+          <div class="project-card-body">
+            <h2 class="project-card-title">Personal Portfolio</h2>
+            <div class="project-card-sub">"VAIDEHI // DIGITAL SPACE"</div>
+            <p class="project-card-desc">
+              Multi-page interactive portfolio featuring custom 'Aurora Digital' canvas physics, skills constellation inspector, and Firebase Firestore administrative dispatch.
+            </p>
+            <div class="project-tags-cloud">
+              <span class="tech-tag">HTML5 / CSS3</span>
+              <span class="tech-tag">JavaScript (ES6+)</span>
+              <span class="tech-tag">Canvas API</span>
+              <span class="tech-tag">Firebase</span>
+            </div>
+          </div>
+          <div class="project-card-foot">
+            <span>INSPECT TELEMETRY</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+        <!-- Project 02: AI Study Planner -->
+        <article class="project-card" data-project-id="02" data-domain="ai" tabindex="0" role="button" aria-label="Open AI Study Planner details">
+          <div class="project-card-header">
+            <span class="project-id-tag">PROJECT // 02</span>
+            <span class="project-badge-tag"><i class="fa-solid fa-code-branch"></i> PROTOTYPE</span>
+          </div>
+          <div class="project-card-body">
+            <h2 class="project-card-title">AI Study Planner</h2>
+            <div class="project-card-sub">Adaptive curriculum scheduling &amp; syllabus breakdown</div>
+            <p class="project-card-desc">
+              Heuristic algorithm designed to dynamically allocate study slots, balance engineering course difficulty, and adapt revision timetables before exam deadlines.
+            </p>
+            <div class="project-tags-cloud">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">AI Heuristics</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">HTML / CSS</span>
+            </div>
+          </div>
+          <div class="project-card-foot">
+            <span>INSPECT TELEMETRY</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+        <!-- Project 03: Café Loyalty & Rewards System -->
+        <article class="project-card" data-project-id="03" data-domain="web" tabindex="0" role="button" aria-label="Open Café Loyalty details">
+          <div class="project-card-header">
+            <span class="project-id-tag">PROJECT // 03</span>
+            <span class="project-badge-tag"><i class="fa-solid fa-code-branch"></i> WEB APP</span>
+          </div>
+          <div class="project-card-body">
+            <h2 class="project-card-title">Café Loyalty &amp; Rewards</h2>
+            <div class="project-card-sub">Digital customer retention &amp; stamp card platform</div>
+            <p class="project-card-desc">
+              Lightweight digital loyalty solution allowing cafés to track customer visits, compute tier promotions (Bronze, Silver, Gold), and redeem beverage vouchers.
+            </p>
+            <div class="project-tags-cloud">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Cloud Firestore</span>
+              <span class="tech-tag">HTML5 / CSS3</span>
+            </div>
+          </div>
+          <div class="project-card-foot">
+            <span>INSPECT TELEMETRY</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+        <!-- Project 04: Agritech Project -->
+        <article class="project-card" data-project-id="04" data-domain="data" tabindex="0" role="button" aria-label="Open Agritech Project details">
+          <div class="project-card-header">
+            <span class="project-id-tag">PROJECT // 04</span>
+            <span class="project-badge-tag"><i class="fa-solid fa-code-branch"></i> IOT / DATA</span>
+          </div>
+          <div class="project-card-body">
+            <h2 class="project-card-title">Agritech Project</h2>
+            <div class="project-card-sub">Soil parameters &amp; crop advisory telemetry dashboard</div>
+            <p class="project-card-desc">
+              Agricultural telemetry dashboard concept simulating sensor data (moisture, temperature, humidity) and generating actionable crop advisory notifications for farmers.
+            </p>
+            <div class="project-tags-cloud">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Analytics</span>
+              <span class="tech-tag">Web UI</span>
+            </div>
+          </div>
+          <div class="project-card-foot">
+            <span>INSPECT TELEMETRY</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+        <!-- Project 05: Hospital Management System -->
+        <article class="project-card" data-project-id="05" data-domain="systems" tabindex="0" role="button" aria-label="Open Hospital Management System details">
+          <div class="project-card-header">
+            <span class="project-id-tag">PROJECT // 05</span>
+            <span class="project-badge-tag"><i class="fa-solid fa-code-branch"></i> SYSTEMS</span>
+          </div>
+          <div class="project-card-body">
+            <h2 class="project-card-title">Hospital Management System</h2>
+            <div class="project-card-sub">Centralized healthcare intake, doctor schedule &amp; records</div>
+            <p class="project-card-desc">
+              Structured system engineered in C++/Python to handle patient intake queues, doctor consultations, medical history tracking, and hospital department records.
+            </p>
+            <div class="project-tags-cloud">
+              <span class="tech-tag">C++ / Python</span>
+              <span class="tech-tag">Object-Oriented Design</span>
+              <span class="tech-tag">Database Architecture</span>
+            </div>
+          </div>
+          <div class="project-card-foot">
+            <span>INSPECT TELEMETRY</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+        <!-- Project 06: Data Visualization Dashboard -->
+        <article class="project-card" data-project-id="06" data-domain="data" tabindex="0" role="button" aria-label="Open Data Visualization Dashboard details">
+          <div class="project-card-header">
+            <span class="project-id-tag">PROJECT // 06</span>
+            <span class="project-badge-tag"><i class="fa-solid fa-code-branch"></i> BI / DATA</span>
+          </div>
+          <div class="project-card-body">
+            <h2 class="project-card-title">Data Visualization Dashboard</h2>
+            <div class="project-card-sub">Multi-dimensional analytics &amp; exploratory KPI metrics</div>
+            <p class="project-card-desc">
+              Interactive executive reporting dashboards built in Power BI and Tableau delivering multi-level filtering, cross-chart slicing, and predictive trend forecasting.
+            </p>
+            <div class="project-tags-cloud">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">Tableau</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Data Analysis</span>
+            </div>
+          </div>
+          <div class="project-card-foot">
+            <span>INSPECT TELEMETRY</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ===================================================================
+       DETAILED PROJECT TELEMETRY MODAL
+       =================================================================== -->
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+    <div class="modal-dialog-box">
+      
+      <div class="modal-top">
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <span id="modal-project-num" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--aurora-cyan); background: rgba(0, 245, 212, 0.1); padding: 4px 10px; border-radius: 4px;">PROJECT // 01</span>
+          <span id="modal-project-domain" style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted);">DOMAIN</span>
+        </div>
+        <button id="project-modal-close" class="modal-close-btn" aria-label="Close modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="modal-content-area">
+        <h2 id="modal-project-title" class="modal-project-title">Project Name</h2>
+        <div id="modal-project-subtitle" class="modal-project-sub">Project Subtitle</div>
+
+        <div class="modal-dual-blocks">
+          <div class="modal-sub-block">
+            <h3 class="modal-sub-heading"><i class="fa-solid fa-triangle-exclamation"></i> THE PROBLEM</h3>
+            <p id="modal-project-problem" class="modal-sub-text">Problem description...</p>
+          </div>
+          <div class="modal-sub-block">
+            <h3 class="modal-sub-heading"><i class="fa-solid fa-lightbulb"></i> THE SOLUTION</h3>
+            <p id="modal-project-solution" class="modal-sub-text">Solution description...</p>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h3 class="modal-sub-heading"><i class="fa-solid fa-code"></i> TECHNOLOGY STACK</h3>
+          <div id="modal-project-tech" class="tags-wrap" style="margin-top: 8px;"></div>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <h3 class="modal-sub-heading"><i class="fa-solid fa-list-check"></i> CORE FEATURES</h3>
+          <ul id="modal-project-features" class="features-list"></ul>
+        </div>
+      </div>
+
+      <div class="modal-bottom-actions">
+        <a href="#" id="modal-github-btn" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <i class="fa-brands fa-github"></i> VIEW CODE
+        </a>
+        <a href="#" id="modal-demo-btn" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> LIVE DEMO
+        </a>
+        <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); align-self: center; margin-left: auto;">
+          * Links use editable placeholders
+        </span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span class="footer-brand">VAIDEHI // DIGITAL SPACE</span>
+        <span>&bull; &copy; 2026 Vaidehi Harde &bull; Computer Engineering</span>
+      </div>
+      <div class="footer-center">
+        <span class="footer-metric-pill">SGPA 9.45 | SGPA 9.41 | CGPA 9.43</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Command Palette Modal -->
+  <div id="cmd-palette" class="cmd-palette-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cmd-box">
+      <div class="cmd-search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="cmd-search-input" placeholder="Type page or action..." autocomplete="off">
+        <span class="cmd-esc-badge">ESC</span>
+      </div>
+      <div class="cmd-results-list" id="cmd-results">
+        <div class="cmd-item" data-url="index.html"><i class="fa-solid fa-house"></i><span>Home</span><span class="cmd-target">index.html</span></div>
+        <div class="cmd-item" data-url="about.html"><i class="fa-solid fa-user"></i><span>About Me</span><span class="cmd-target">about.html</span></div>
+        <div class="cmd-item" data-url="education.html"><i class="fa-solid fa-graduation-cap"></i><span>Education &amp; 9.43 CGPA</span><span class="cmd-target">education.html</span></div>
+        <div class="cmd-item" data-url="skills.html"><i class="fa-solid fa-microchip"></i><span>Skills Constellation</span><span class="cmd-target">skills.html</span></div>
+        <div class="cmd-item" data-url="projects.html"><i class="fa-solid fa-cubes"></i><span>Project Universe</span><span class="cmd-target">projects.html</span></div>
+        <div class="cmd-item" data-url="achievements.html"><i class="fa-solid fa-trophy"></i><span>Achievements</span><span class="cmd-target">achievements.html</span></div>
+        <div class="cmd-item" data-url="contact.html"><i class="fa-solid fa-paper-plane"></i><span>Contact Me</span><span class="cmd-target">contact.html</span></div>
+        <div class="cmd-item" data-url="admin.html"><i class="fa-solid fa-shield-halved"></i><span>Admin Console</span><span class="cmd-target">admin.html</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/background.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>
